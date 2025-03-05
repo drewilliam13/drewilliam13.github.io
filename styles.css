@@ -243,7 +243,7 @@ strong {
   }
 
   .testimonials-container {
-    gap: 5px;
+    gap: 0px;
     width: calc(100% - 60px); /* Adjust width to leave space for arrows */
   }
 
@@ -254,7 +254,7 @@ strong {
 
   .testimonial-prev,
   .testimonial-next {
-    font-size: 1rem; /* Smaller arrows for mobile */
+    font-size: 1.5rem; /* Smaller arrows for mobile */
   }
 
   /* Adjust the left and right margins for the arrows */
