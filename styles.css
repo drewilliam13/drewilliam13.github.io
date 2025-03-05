@@ -260,16 +260,16 @@ strong {
   /* Adjust the left and right margins for the arrows */
   .testimonial-prev,
   .testimonial-next {
-    padding: 0 5px; /* Smaller padding for arrows */
+    padding: 0 3px; /* Smaller padding for arrows */
   }
 
   /* Optionally, adjust the arrow container's position for smaller screens */
   .testimonial-prev {
-    left: 3px;
+    left: 1px;
   }
 
   .testimonial-next {
-    right: 3px;
+    right: 1px;
   }
 }
 
