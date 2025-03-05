@@ -244,7 +244,7 @@ strong {
   }
 
   .testimonial {
-    min-width: 200px; /* Adjust min-width for mobile */
+    min-width: 100px; /* Adjust min-width for mobile */
     max-width: 300px; /* Adjust max-width for mobile */
   }
 
