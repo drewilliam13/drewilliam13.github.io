@@ -127,14 +127,14 @@ document
 
     // Send the form data using EmailJS
     emailjs.sendForm("service_juppchs", "template_dnqh1xi", form).then(
-      function (response) {
+      (response) => {
         // Success message
         document.getElementById("form-feedback").innerHTML =
           '<div class="alert alert-success">Message sent successfully! Check your inbox.</div>';
         form.reset(); // Reset the form
         form.classList.remove("was-validated"); // Remove validation state
       },
-      function (error) {
+      (error) => {
         // Error message
         document.getElementById(
           "form-feedback"
