@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Drew McDaniel Resume</title>
+    <!-- Link to Bootstrap CSS -->
+    <link
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Link to Custom CSS Stylesheet-->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Font Awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Add your content here -->
+    <!-- Navbar (static top menu) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container">
+        <a href="#top" class="myname"><h3>Drew McDaniel</h3></a>
+        <h4>Resume</h4>
+        <a class="navbar-brand" href="#"></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#testimonials">Testimonials</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#experience">Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#education">Education</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- About Section -->
+    <section class="container mt-5 pt-5" id="top">
+      <div class="row">
+        <div class="col-lg-3">
+          <img src="assets/me2.JPG" alt="Me" class="img-fluid rounded-circle" />
+        </div>
+        <div class="col-lg-6">
+          <h2 id="about">About Me</h2>
+          <p><strong>Hello, I'm Drew McDaniel from Scottsdale, AZ.</strong></p>
+          <p>
+            I'm an adaptive software professional with expertise in Quality
+            Assurance, Automation, and Agile Project Management. I specialize in
+            <strong>Cypress with JavaScript</strong> for automated testing,
+            ensuring seamless and efficient workflows. Known for being
+            approachable, resourceful, and always ready to help, I thrive in
+            collaborative environments where I can support teams and drive
+            product quality.
+          </p>
+          <p>
+            With experience leading QA teams, I focus on maintaining high
+            standards while effectively managing project risks and resources.
+            Passionate about continuous learning, I’m always exploring new
+            technologies and tackling challenging projects that make a
+            real-world impact.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="container my-5">
+      <h2 class="text-center mb-4">Testimonials</h2>
+      <div class="testimonials-wrapper">
+        <button class="testimonial-prev">&#10094;</button>
+        <div class="testimonials-container">
+          <div class="testimonial">
+            <p class="quote">
+              "Drew is a pleasure to work with! He is customer-focused and a
+              strong communicator who isn't afraid to speak up and share ideas
+              or provide insights. Drew is a thinker that is always evaluating
+              processes and looking for ways to improve workflows and be more
+              efficient."
+            </p>
+            <div class="testimonial-info">
+              <a
+                href="https://www.linkedin.com/in/brooke-wittkamp-38411b7a/"
+                target="_blank"
+                ><img
+                  src="assets/brooke.jpg"
+                  alt="Brooke W."
+                  class="testimonial-img"
+              /></a>
+              <div>
+                <a
+                  href="https://www.linkedin.com/in/brooke-wittkamp-38411b7a/"
+                  target="_blank"
+                  class="name"
+                  >Brooke W.</a
+                >
+                <div class="position">QA Supervisor, Fullbay</div>
+                <div class="relationship">Brooke managed Drew directly</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial">
+            <p class="quote">
+              "I have so appreciated working with Drew. I really love his
+              leadership style—balancing a calm demeanor with a continuous
+              pursuit of improvements. Wherever his path leads next, no doubt
+              he'll make an exceptional impact."
+            </p>
+            <div class="testimonial-info">
+              <a href="https://www.linkedin.com/in/esievaughn/" target="_blank"
+                ><img
+                  src="assets/esie.jpg"
+                  alt="Esie V."
+                  class="testimonial-img"
+              /></a>
+              <div>
+                <a
+                  href="https://www.linkedin.com/in/esievaughn/"
+                  target="_blank"
+                  class="name"
+                  >Esie V.</a
+                >
+                <div class="position">Product Owner, Fullbay</div>
+                <div class="relationship">Drew managed Esie directly</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial">
+            <p class="quote">
+              "We brought on Drew as a tester on a high visibility compliance
+              project that had a very tight timeline. I was extremely impressed.
+              He assumed the lead test role with minimal training and support.
+              He is a quick learner. He oversaw all aspects of testing and
+              ensured we had a quality product at time of implementation. He was
+              a great find for us."
+            </p>
+            <div class="testimonial-info">
+              <a href="https://www.linkedin.com/in/srgordon2/" target="_blank"
+                ><img
+                  src="assets/scott.jpg"
+                  alt="Scott G."
+                  class="testimonial-img"
+              /></a>
+              <div>
+                <a
+                  href="https://www.linkedin.com/in/srgordon2/"
+                  target="_blank"
+                  class="name"
+                  >Scott G.</a
+                >
+                <div class="position">
+                  Manager, Software Testing, AAA NorCal, NE & UT
+                </div>
+                <div class="relationship">Scott managed Drew directly</div>
+              </div>
+            </div>
+          </div>
+          <!-- Add more testimonials as needed -->
+        </div>
+        <button class="testimonial-next">&#10095;</button>
+      </div>
+    </section>
+    <br />
+    <!-- Skills Section -->
+    <section id="skills" class="container my-5">
+      <h2 class="text-center mb-4">Skills</h2>
+      <div class="d-flex flex-wrap justify-content-center gap-4">
+        <!-- Cypress -->
+        <div class="skill">
+          <img src="assets/cypress.svg" alt="Cypress" />
+          <span>Cypress</span>
+        </div>
+
+        <!-- JavaScript -->
+        <div class="skill">
+          <i class="fab fa-js js-icon"></i>
+          <span>JavaScript</span>
+        </div>
+
+        <!-- Postman -->
+        <div class="skill">
+          <img
+            src="https://www.svgrepo.com/show/354202/postman-icon.svg"
+            alt="Postman"
+          />
+          <span>Postman</span>
+        </div>
+
+        <!-- SQL -->
+        <div class="skill">
+          <i class="fas fa-database sql-icon"></i>
+          <span>SQL</span>
+        </div>
+
+        <!-- Terminal -->
+        <div class="skill">
+          <i class="fas fa-terminal terminal-icon"></i>
+          <span>Terminal</span>
+        </div>
+
+        <!-- Git -->
+        <div class="skill">
+          <i class="fab fa-git-alt git-icon"></i>
+          <span>Git</span>
+        </div>
+
+        <!-- Azure DevOps -->
+        <div class="skill">
+          <img src="assets/Azure Devops.png" alt="Azure DevOps" />
+          <span>Azure DevOps</span>
+        </div>
+
+        <!-- Jira -->
+        <div class="skill">
+          <img src="assets/jira-1.svg" alt="Jira" />
+          <span>Jira</span>
+        </div>
+
+        <!-- Zephyr Scale -->
+        <div class="skill">
+          <img src="assets/zs_icon-clr.svg" alt="Zephyr Scale" />
+          <span>Zephyr Scale</span>
+        </div>
+
+        <!-- Confluence -->
+        <div class="skill">
+          <img
+            src="assets/confluence-logo-png_seeklogo-338595.png"
+            alt="Confluence"
+          />
+          <span>Confluence</span>
+        </div>
+
+        <!-- Monday -->
+        <div class="skill">
+          <img src="assets/monday-1.svg" alt="Monday" />
+          <span>Monday</span>
+        </div>
+
+        <!-- Figma -->
+        <div class="skill">
+          <i class="fab fa-figma figma-icon"></i>
+          <span>Figma</span>
+        </div>
+
+        <!-- Slack -->
+        <div class="skill">
+          <i class="fab fa-slack slack-icon"></i>
+          <span>Slack</span>
+        </div>
+
+        <!-- Teams -->
+        <div class="skill">
+          <img src="assets/team.png" alt="Teams" />
+          <span>Teams</span>
+        </div>
+
+        <!-- HTML -->
+        <div class="skill">
+          <i class="fab fa-html5 html-icon"></i>
+          <span>HTML</span>
+        </div>
+
+        <!-- CSS -->
+        <div class="skill">
+          <i class="fab fa-css3-alt css-icon"></i>
+          <span>CSS</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="experience-container">
+        <div class="experience-box">
+          <a href="https://codemify.com/" target="_blank">
+            <img
+              src="assets/codemify.png"
+              alt="Codemify"
+              class="company-logo"
+            />
+          </a>
+          <h3 class="exp-position">QA Automation Engineer Intern</h3>
+          <h4>02 to 05/25 | Scottsdale, AZ (Remote)</h4>
+          <p>
+            Participating in an intensive QA automation bootcamp, specializing in <strong>Cypress with JavaScript</strong>. 
+            Gaining hands-on experience in an Agile startup environment, focusing on test automation, bug reporting, 
+            and collaboration within cross-functional teams.
+          </p>
+        </div>
+
+        <div class="experience-box">
+          <a href="https://fullbay.com" target="_blank">
+            <img
+              src="assets/fullbay.png"
+              alt="Fullbay"
+              class="company-logo"
+              id="fullbay"
+            />
+          </a>
+          <h3>Lead Quality Assurance Analyst</h3>
+          <h4>05/21 to 03/24 | Phoenix, AZ (Remote)</h4>
+          <p>
+            Led QA efforts for a <strong>SaaS workforce management platform</strong>, ensuring high-quality releases throughout the SDLC. 
+            <strong>Promoted from QA Analyst</strong>. Coordinated testing activities, integrated automation initiatives, and collaborated with product owners and 
+            developers to enhance product quality and optimize Agile release cycles.
+          </p>
+        </div>
+
+        <div class="experience-box">
+          <a href="https://wellsfargo.com" target="_blank">
+            <img
+              src="assets/wellsfargo.png"
+              alt="Wells Fargo"
+              class="company-logo"
+            />
+          </a>
+          <h3>Quality Assurance Analyst</h3>
+          <h4>03 to 05/20 | Tempe, AZ (Remote)</h4>
+          <p>
+            Contract via
+            <a
+              href="https://www.cognizant.com/us/en"
+              target="_blank"
+              class="no-break"
+              ><img src="assets/cognizant.png" class="tiny" /> Cognizant</a
+            >
+          </p>
+          <p>
+            Conducted comprehensive front-end and back-end testing for an application 
+            migration project, focusing on UI functionality, regulatory compliance, and defect 
+            resolution. Worked within an Agile framework to support timely and efficient software releases.
+          </p>
+        </div>
+
+        <div class="experience-box">
+          <a href="https://mwg.aaa.com/" target="_blank">
+            <img src="assets/aaa.png" alt="AAA" class="company-logo" />
+          </a>
+          <h3>Lead Quality Assurance Analyst</h3>
+          <h4>09 to 12/19 | Phoenix, AZ</h4>
+          <p>
+            Contract via
+            <a href="https://www.kforce.com/" target="_blank" class="no-break"
+              ><img src="assets/kforce.png" class="tiny" /> Kforce</a
+            >
+          </p>
+          <p>
+            Gathered and analyzed business requirements from software teams to ensure project 
+            alignment with compliance standards. Led a major QA project, improving the quality 
+            and efficiency of software testing processes across the organization.
+          </p>
+        </div>
+
+        <div class="experience-box">
+          <a href="https://www.uhaul.com/" target="_blank">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/f/fb/U-Haul_logo.svg"
+              alt="U-Haul"
+              class="company-logo"
+              id="uhaul"
+            />
+          </a>
+          <h3>Quality Assurance Analyst</h3>
+          <h4>01 to 08/19 | Phoenix, AZ</h4>
+          <p>
+            Tested U-Haul’s in-house POS systems, resolving escalated user-reported issues and 
+            improving system functionality. Collaborated within an Agile environment to enhance 
+            software reliability and optimize user experience.
+          </p>
+        </div>
+
+        <div class="experience-box">
+          <a href="https://www.americanairlines.com/" target="_blank">
+            <img
+              src="assets/aa.png"
+              alt="American Airlines"
+              class="company-logo"
+            />
+          </a>
+          <h3>Quality Assurance Analyst</h3>
+          <h4>04 to 08/18 | Tempe, AZ</h4>
+          <p>
+            Contract via
+            <a href="https://techoneit.com/" target="_blank" class="no-break"
+              ><img src="assets/techone.jpg" class="tiny" /> Tech One IT</a
+            >
+          </p>
+          <p>
+            Performed interactive testing for the Flight Operations System (FOS) Crew Scheduling App, 
+            ensuring the stability and usability of critical airline scheduling software.
+          </p>
+        </div>
+
+        <div class="experience-box">
+          <a href="https://www.digitaldreamforge.com/" target="_blank">
+            <img
+              src="assets/ddf.png"
+              alt="Digital Dream Forge"
+              class="company-logo"
+            />
+          </a>
+          <h3>Quality Assurance Analyst</h3>
+          <h4>03 to 08/17 | Scottsdale, AZ</h4>
+          <p>
+            Conducted exploratory and functional testing for mobile and web applications, focusing on 
+            mobile payment systems like 
+            <a
+              href="https://squareup.com/us/en"
+              target="_blank"
+              class="no-break"
+            >
+              <img src="assets/square.png" class="tiny" /> Square
+            </a>
+            and gaming platforms. Ensured quality assurance processes met client needs and improved user satisfaction.
+          </p>
+        </div>
+
+        <div class="experience-box">
+          <a
+            href="https://www.usgs.gov/centers/astrogeology-science-center/about"
+            target="_blank"
+          >
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/1/1c/USGS_logo_green.svg"
+              alt="USGS"
+              class="company-logo"
+            />
+          </a>
+          <h3 class="exp-position">Computer Science Intern</h3>
+          <h4>2014 | Flagstaff, AZ</h4>
+          <p>
+            Processed Mars Rover images and data using SQL and Linux Command Line. Assisted with database administration 
+            tasks and contributed to data analysis in planetary research projects.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section id="education">
+      <h2>Education & Certifications</h2>
+      <div class="education-container">
+        <div class="education-box">
+          <a href="https://codemify.com" target="_blank">
+            <img
+              src="assets/codemify.png"
+              alt="PMP Logo"
+              class="institution-icon"
+            />
+          </a>
+          <h3 class="exp-position">QA Automation Engineer</h3>
+          <p>Certification anticipated completion date: 05/25</p>
+        </div>
+
+        <div class="education-box">
+          <a
+            href="https://www.credly.com/badges/69e41477-ca56-46f7-9c7b-17aaeb45babd/"
+            target="_blank"
+          >
+            <img
+              src="assets/pmi.png"
+              alt="PMP Logo"
+              class="institution-icon"
+              id="pmi"
+            />
+          </a>
+          <h3>Project Management Professional (PMP)</h3>
+          <p>Certification awarded: 08/24</p>
+          <a
+            href="https://www.credly.com/badges/69e41477-ca56-46f7-9c7b-17aaeb45babd/linked_in_profile"
+            target="_blank"
+            >View Certification</a
+          >
+        </div>
+
+        <div class="education-box">
+          <a href="https://www.nau.edu" target="_blank">
+            <img
+              src="assets/NAU.png"
+              alt="NAU Logo"
+              class="institution-icon"
+              id="nau"
+            />
+          </a>
+          <h3>Bachelor of Science</h3>
+          <p>in Computer Science</p>
+        </div>
+      </div>
+    </section>
+    <br />
+    <br />
+    <br />
+    <!-- Contact Section -->
+    <section id="contact">
+      <!-- Contact Info Container (LinkedIn & Email) and Form -->
+      <div class="contact-container">
+        <!-- Contact Info Box (LinkedIn and Email) -->
+        <div class="contact-info-box">
+          <h2>Contact</h2>
+          <br />
+          <!-- LinkedIn Icon with Profile Link -->
+          <p>Scottsdale, AZ</p>
+          <div class="contact-item">
+            <a
+              href="https://www.linkedin.com/in/drewmcdaniel92"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i
+                class="fab fa-linkedin"
+                style="color: #0077b5; font-size: 24px"
+              ></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/drewmcdaniel92"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>/in/drewmcdaniel92</span>
+            </a>
+          </div>
+
+          <!-- Email Address -->
+          <div class="contact-item">
+            <a href="mailto:drewilliam13@gmail.com">
+              <i
+                class="fas fa-envelope"
+                style="color: grey; font-size: 24px"
+              ></i>
+            </a>
+            <a href="mailto:drewilliam13@gmail.com">
+              <span>drewilliam13@gmail.com</span>
+            </a>
+          </div>
+          <img src="assets/me.png" />
+        </div>
+
+        <!-- Email Form -->
+        <div class="contact-form">
+          <h3>Send Me a Message</h3>
+          <form
+            id="contact-form"
+            action="https://formspree.io/f/YOUR_FORM_ID"
+            method="POST"
+            novalidate
+          >
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                name="name"
+                required
+              />
+              <div class="invalid-feedback">Please enter your name.</div>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email address</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                required
+              />
+              <div class="invalid-feedback">
+                Please enter a valid email address.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea
+                class="form-control"
+                id="message"
+                name="message"
+                rows="4"
+                required
+              ></textarea>
+              <div class="invalid-feedback">Please enter a message.</div>
+            </div>
+            <input type="hidden" name="_cc" value="{{email}}" />
+            <!-- CC sender -->
+            <button type="submit" class="btn btn-primary">Send Message</button>
+            <div id="form-feedback" class="mt-3"></div>
+            <!-- Feedback message -->
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bootstrap's JS and Popper.js for interactive components (optional) -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Link to Custom JS Scripts-->
+    <script src="scripts.js"></script>
+  </body>
+</html>

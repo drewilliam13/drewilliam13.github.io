@@ -1,0 +1,556 @@
+h4 {
+  font-size: 20px;
+  color: grey;
+  padding-left: 20px;
+}
+
+section, #about {
+  scroll-margin-top: 80px; /* Adjust this value to match your navbar height */
+}
+
+/* Background Image with White Overlay */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url("https://upload.wikimedia.org/wikipedia/commons/4/4d/Saguaro_National_Park_Vista_-_Flickr_-_kinglear55.jpg")
+    center/cover no-repeat;
+  opacity: 0.15; /* 15% opacity */
+  z-index: -1; /* Places it behind everything */
+}
+
+/* Content Boxes (Keeps Solid Background) */
+.content-box {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px; /* Optional for rounded corners */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+}
+
+a {
+  text-decoration: none;
+}
+
+a.myname {
+  text-decoration: none;
+  color: inherit;
+}
+
+/********** About Section **********************************************************************/
+#top .row {
+  display: flex;
+  justify-content: center; /* Centers the content horizontally */
+  align-items: center; /* Aligns items in the center vertically */
+}
+
+#top img {
+  max-width: 100%; /* Ensures responsiveness */
+  height: auto; 
+  margin-bottom: 20px; /* Adds spacing */
+}
+
+strong {
+  font-weight: 500; /* Medium boldness */
+}
+
+
+/*********** Skills Section ************************************************************************/
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+
+.skill img,
+.skill i {
+  width: 80px; /* Match Postman size */
+  height: 80px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover & Tap Effect */
+.skill:hover img,
+.skill:focus img,
+.skill:hover i,
+.skill:focus i {
+  transform: scale(1.2);
+}
+
+.skill span {
+  position: absolute;
+  bottom: -25px;
+  font-size: 14px;
+  font-weight: bold;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.skill:hover span,
+.skill:focus span {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Set Proper Brand Colors */
+.js-icon {
+  color: #f7df1e;
+  font-size: 80px;
+} /* JavaScript Yellow */
+.sql-icon {
+  color: #4479a1;
+  font-size: 80px;
+} /* SQL Blue */
+.terminal-icon {
+  color: #4e4e4e;
+  font-size: 80px;
+} /* Dark Grey */
+.git-icon {
+  color: #f34f29;
+  font-size: 80px;
+} /* Git Red */
+.figma-icon {
+  color: #f24e1e; /* Figma's main brand color */
+  font-size: 80px; /* Match all other icons */
+}
+.slack-icon {
+  color: #4a154b;
+  font-size: 80px;
+} /* Slack Purple */
+.html-icon {
+  color: #e34f26;
+  font-size: 80px;
+} /* HTML Orange */
+.css-icon {
+  color: #1572b6;
+  font-size: 80px;
+} /* CSS Blue */
+
+/************* Testimonials Section ***************************************************************/
+
+.testimonials-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+}
+
+.testimonials-container {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Hides scrollbar in Firefox */
+}
+
+.testimonials-container::-webkit-scrollbar {
+  display: none; /* Hides scrollbar in Chrome, Safari */
+}
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 300px;
+  max-width: 350px;
+}
+
+.testimonial, .experience-box, .education-box{
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial .quote {
+  font-style: italic;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.testimonial-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+
+.testimonial-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.name {
+  font-weight: bold;
+  color: #0073b1;
+  text-decoration: none;
+}
+
+.name:hover {
+  text-decoration: underline;
+}
+
+.relationship {
+  color: grey;
+  font-size: 0.87rem;
+}
+
+.testimonial-prev,
+.testimonial-next {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #0073b1;
+  transition: color 0.3s ease;
+}
+
+.testimonial-prev:hover,
+.testimonial-next:hover {
+  color: #005582;
+}
+
+/************************** Experience Section *************************************************************/
+
+#experience h2 {
+  text-align: center; /* Centers the title */
+  margin-bottom: 20px; /* Adds spacing below the title */
+}
+
+.no-break {
+  white-space: nowrap;
+}
+
+.experience-container,
+.education-container {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(350px, 1fr)
+  ); /* Two per row if space allows */
+  gap: 20px; /* Space between boxes */
+}
+
+.experience-box,
+.education-box {
+  text-align: center;
+}
+
+.company-logo, .institution-icon {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.10);
+  height: auto;
+  max-height: 80px;
+  max-width: 180px; /* Set a max width for the logo */
+  border-radius: 10px;
+  margin-bottom: 15px; /* Space between logo and job title */
+}
+
+.company-logo:hover, .institution-icon:hover {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Slightly larger shadow on hover */
+  transform: translateY(-5px); /* Slight upward movement on hover */
+}
+
+.company-logo#uhaul {
+  border-radius: 0;
+}
+
+#fullbay {
+  background-color: #182334;
+}
+
+.tiny {
+  max-width: 30px;
+  max-height: 30px;
+  border-radius: 5px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); /* Slightly larger shadow on hover */
+}
+
+#experience, #education {
+  padding: 2rem;
+}
+
+/* General styling for the experience box */
+.experience-box {
+  margin-bottom: 20px; /* Space between experience boxes */
+  transition: all 0.3s ease-in-out; /* Smooth transition for hover effect */
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+}
+
+/* Position title styling */
+.experience-box h3, .education-box h3 {
+  font-size: 1.2rem; /* Larger font size for job title */
+  font-weight: 600; /* Make the title bold */
+  color: #2e3a46; /* Dark gray color for the text */
+  margin-bottom: 5px; /* Space between title and dates */
+}
+
+/* Date styling */
+/* Location styling */
+.experience-box h4 {
+  font-size: 1rem;
+  color: #7d8b8c; /* Soft gray for the location */
+  margin-bottom: 10px; /* Space between location and description */
+}
+
+/* Description text styling */
+.experience-box p, 
+.education-box p,
+.experience-box ul {
+  font-size: 1rem;
+  color: #4a5d6c; /* Slightly muted dark blue/gray for the description */
+  line-height: 1.6; /* Improve readability with line height */
+  margin: 5px 0; /* Remove any extra margin */
+
+}
+
+/* Add a subtle link color */
+.experience-box a, .education-container a {
+  text-decoration: none;
+  color: #4f9d9d;
+}
+
+.experience-box a:hover, .education-container a:hover {
+  color: darkcyan; /* Calming teal color on hover */
+}
+
+/******************************* Education Section *****************************************/
+
+#education h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.education-item {
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.degree {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.institution-name a {
+  display: inline-block;
+}
+
+.attendance-dates {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  #education {
+    padding: 1rem;
+  }
+
+  .education-item {
+    padding: 1rem;
+  }
+
+  .degree {
+    font-size: 1.2rem;
+  }
+
+  .experience-container,
+  .education-container {
+    grid-template-columns: 1fr; /* One per row on mobile */
+  }
+}
+
+.institution-icon#pmi, .institution-icon#nau {
+  box-shadow: 0 0 0;
+}
+
+.institution-icon#nau {
+  border-radius: 0;
+}
+
+/************************** Contact Section *************************************/
+#contact {
+  padding: 2rem;
+  background-color: #f1f1f1;
+}
+
+#contact p {
+  font-size: 20px;
+}
+
+/* Contact Container: Layout */
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+/* Contact Info */
+.contact-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.contact-item {
+  display: flex;
+  align-items: left;
+  margin-bottom: 1rem;
+}
+
+.contact-item a {
+  margin-right: 10px;
+}
+
+.contact-icon {
+  width: 40px;
+  height: auto;
+  vertical-align: top;
+}
+
+.contact-item span {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* Contact Section */
+#contact {
+  padding: 2rem;
+  background-color: #f1f1f1;
+}
+
+/* Contact Container: Layout */
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+/* Contact Info Box */
+.contact-info-box {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+}
+
+.contact-container img{
+  max-width: 180px;
+  max-height: 180px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.contact-item a {
+  margin-right: 10px;
+}
+
+.contact-icon {
+  width: 40px;
+  height: auto;
+  vertical-align: middle;
+}
+
+.contact-item span {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* Contact Form */
+.contact-form {
+  flex: 2;
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: darkcyan;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: darkslategray;
+}
+
+/* Mobile and Tablet */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-info-box {
+    margin-bottom: 2rem;
+  }
+
+  .contact-icon {
+    width: 35px;
+  }
+
+  .contact-form {
+    padding: 1rem;
+  }
+}
