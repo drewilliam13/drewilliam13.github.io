@@ -4,20 +4,24 @@ document.addEventListener("click", function (event) {
   const navbarCollapse = document.querySelector(".navbar-collapse");
 
   // Close menu if clicking outside of it
-  if (navbarCollapse.classList.contains("show") && !navbarToggler.contains(event.target) && !navbarCollapse.contains(event.target)) {
-      navbarToggler.click(); // Closes menu
+  if (
+    navbarCollapse.classList.contains("show") &&
+    !navbarToggler.contains(event.target) &&
+    !navbarCollapse.contains(event.target)
+  ) {
+    navbarToggler.click(); // Closes menu
   }
 });
 
 // Close menu when clicking a menu item
-document.querySelectorAll(".navbar-nav .nav-link").forEach(item => {
+document.querySelectorAll(".navbar-nav .nav-link").forEach((item) => {
   item.addEventListener("click", () => {
-      const navbarToggler = document.querySelector(".navbar-toggler");
-      const navbarCollapse = document.querySelector(".navbar-collapse");
+    const navbarToggler = document.querySelector(".navbar-toggler");
+    const navbarCollapse = document.querySelector(".navbar-collapse");
 
-      if (navbarCollapse.classList.contains("show")) {
-          navbarToggler.click(); // Closes menu
-      }
+    if (navbarCollapse.classList.contains("show")) {
+      navbarToggler.click(); // Closes menu
+    }
   });
 });
 
@@ -38,7 +42,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Show/hide right arrow
-    if (container.scrollLeft + container.clientWidth < container.scrollWidth - 1) {
+    if (
+      container.scrollLeft + container.clientWidth <
+      container.scrollWidth - 1
+    ) {
       nextBtn.style.opacity = "1";
       nextBtn.style.pointerEvents = "auto";
     } else {
@@ -89,41 +96,47 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Contact Form
-document
-  .getElementById("contact-form")
-  .addEventListener("submit", function (e) {
-    e.preventDefault(); // Prevent the form from submitting traditionally
+// Initialize EmailJS with your Public Key
+emailjs.init({
+  publicKey: 'evO7PhDyoN5B_rsaT',  // Replace with your actual Public Key
+  blockHeadless: true,  // Block headless browsers
+  limitRate: {
+    id: 'app',
+    throttle: 10000,  // Limit to 1 request per 10 seconds
+  },
+});
 
-    const form = e.target;
-    const email = form.querySelector("#email");
-    const isValidEmail = email.checkValidity(); // HTML5 validation
+// Contact Form Handling
+document.getElementById("contact-form").addEventListener("submit", function (e) {
+  e.preventDefault(); // Prevent the form from submitting traditionally
 
-    if (!form.checkValidity()) {
-      form.classList.add("was-validated");
-      if (!isValidEmail) {
-        email.classList.add("is-invalid");
-      }
-      return; // Stop if the form is invalid
+  const form = e.target;
+  const email = form.querySelector("#email");
+  const isValidEmail = email.checkValidity(); // HTML5 validation
+
+  // Check if the form is valid
+  if (!form.checkValidity()) {
+    form.classList.add("was-validated");
+    if (!isValidEmail) {
+      email.classList.add("is-invalid");
     }
+    return; // Stop if the form is invalid
+  }
 
-    const formData = new FormData(form);
+  // Create FormData object for the form
+  const formData = new FormData(form);
 
-    emailjs
-      .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", formData, "YOUR_USER_ID")
-      .then(
-        function (response) {
-          // Success message
-          document.getElementById("form-feedback").innerHTML =
-            '<div class="alert alert-success">Message sent successfully! Check your inbox.</div>';
-          form.reset();
-          form.classList.remove("was-validated");
-        },
-        function (error) {
-          // Error message
-          document.getElementById(
-            "form-feedback"
-          ).innerHTML = `<div class="alert alert-danger">${error.message}</div>`;
-        }
-      );
-  });
+  // Send the form data using EmailJS
+  emailjs.sendForm('service_juppchs', 'template_dnqh1xi', formData)
+    .then(function(response) {
+      // Success message
+      document.getElementById("form-feedback").innerHTML =
+        '<div class="alert alert-success">Message sent successfully! Check your inbox.</div>';
+      form.reset(); // Reset the form
+      form.classList.remove("was-validated"); // Remove validation state
+    }, function(error) {
+      // Error message
+      document.getElementById("form-feedback").innerHTML =
+        `<div class="alert alert-danger">${error.message}</div>`;
+    });
+});
