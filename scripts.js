@@ -121,7 +121,7 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
     (response) => {
       // Success message
       document.getElementById("form-feedback").innerHTML =
-        '<div class="alert alert-success">Message sent successfully! Check your inbox.</div>';
+        '<div class="alert alert-success">Message sent successfully!</div>';
       form.reset(); // Reset the form
       form.classList.remove("was-validated"); // Remove validation state
     },
