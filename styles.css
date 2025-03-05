@@ -142,38 +142,36 @@ strong {
 
 /************* Testimonials Section ***************************************************************/
 
-/************* Testimonials Section ***************************************************************/
-
 .testimonials-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   margin: auto;
-  overflow: hidden;
+  overflow: hidden; /* Keeps it tidy */
 }
 
 .testimonials-container {
   display: flex;
   gap: 20px;
-  overflow-x: auto;
+  overflow-x: auto; /* Allow scrolling horizontally */
   scroll-behavior: smooth;
-  scrollbar-width: none; /* Hides scrollbar in Firefox */
-  -ms-overflow-style: none; /* Hides scrollbar in IE */
-  flex-wrap: nowrap; /* Prevent wrapping */
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar in IE */
+  width: 100%; /* Ensures it takes up the full width of its container */
 }
 
 .testimonials-container::-webkit-scrollbar {
-  display: none; /* Hides scrollbar in Chrome, Safari */
+  display: none; /* Hide scrollbar in Chrome/Safari */
 }
 
 .testimonial {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-width: 300px; /* Ensure a minimum width */
-  max-width: 350px; /* Ensure a max width */
-  flex-shrink: 0; /* Prevent shrinking of testimonials */
+  min-width: 300px; /* Keeps a solid minimum width */
+  max-width: 350px; /* Keeps a solid max width */
+  flex-shrink: 0; /* Prevents shrinking of individual testimonials */
 }
 
 .testimonial,
@@ -239,18 +237,39 @@ strong {
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
+  .testimonials-wrapper {
+    width: 100%;
+    overflow-x: auto; /* Enable scrolling */
+  }
+
   .testimonials-container {
-    gap: 10px; /* Reduce the gap on smaller screens */
+    gap: 10px;
+    width: calc(100% - 60px); /* Adjust width to leave space for arrows */
   }
 
   .testimonial {
-    min-width: 100px; /* Adjust min-width for mobile */
-    max-width: 300px; /* Adjust max-width for mobile */
+    min-width: 270px; /* Reduced size for mobile */
+    max-width: 320px; /* Adjusted max width for mobile */
   }
 
   .testimonial-prev,
   .testimonial-next {
     font-size: 1.5rem; /* Smaller arrows for mobile */
+  }
+
+  /* Adjust the left and right margins for the arrows */
+  .testimonial-prev,
+  .testimonial-next {
+    padding: 0 15px; /* Smaller padding for arrows */
+  }
+
+  /* Optionally, adjust the arrow container's position for smaller screens */
+  .testimonial-prev {
+    left: 10px;
+  }
+
+  .testimonial-next {
+    right: 10px;
   }
 }
 
