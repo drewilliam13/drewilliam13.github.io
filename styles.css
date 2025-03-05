@@ -254,7 +254,7 @@ strong {
 
   .testimonial-prev,
   .testimonial-next {
-    font-size: .8rem; /* Smaller arrows for mobile */
+    font-size: 1rem; /* Smaller arrows for mobile */
   }
 
   /* Adjust the left and right margins for the arrows */
@@ -265,11 +265,11 @@ strong {
 
   /* Optionally, adjust the arrow container's position for smaller screens */
   .testimonial-prev {
-    left: 1px;
+    left: 0px;
   }
 
   .testimonial-next {
-    right: 1px;
+    right: 0px;
   }
 }
 
