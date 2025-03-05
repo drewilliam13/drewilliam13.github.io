@@ -171,7 +171,7 @@ strong {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-width: 100px; /* Ensure a minimum width */
+  min-width: 300px; /* Ensure a minimum width */
   max-width: 350px; /* Ensure a max width */
   flex-shrink: 0; /* Prevent shrinking of testimonials */
 }
@@ -244,7 +244,7 @@ strong {
   }
 
   .testimonial {
-    min-width: 250px; /* Adjust min-width for mobile */
+    min-width: 200px; /* Adjust min-width for mobile */
     max-width: 300px; /* Adjust max-width for mobile */
   }
 
