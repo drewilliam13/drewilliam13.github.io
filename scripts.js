@@ -97,48 +97,39 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Contact Form Handling
-document
-  .getElementById("contact-form")
-  .addEventListener("submit", function (e) {
-    e.preventDefault(); // Prevent the form from submitting traditionally
+document.getElementById("contact-form").addEventListener("submit", function (e) {
+  e.preventDefault(); // Prevent the form from submitting traditionally
 
-    const form = e.target;
-    const email = form.querySelector("#email");
-    const isValidEmail = email.checkValidity(); // HTML5 validation
+  const form = e.target;
+  const email = form.querySelector("#email");
+  const isValidEmail = email.checkValidity(); // HTML5 validation
 
-    // Check if the form is valid
-    if (!form.checkValidity()) {
-      form.classList.add("was-validated");
-      if (!isValidEmail) {
-        email.classList.add("is-invalid");
-      }
-      return; // Stop if the form is invalid
+  // Check if the form is valid
+  if (!form.checkValidity()) {
+    form.classList.add("was-validated");
+    if (!isValidEmail) {
+      email.classList.add("is-invalid");
     }
+    return; // Stop if the form is invalid
+  }
 
-    // Initialize EmailJS with your Public Key
-    emailjs.init({
-      publicKey: "evO7PhDyoN5B_rsaT", // Replace with your actual Public Key
-      blockHeadless: true, // Block headless browsers
-      limitRate: {
-        id: "app",
-        throttle: 10000, // Limit to 1 request per 10 seconds
-      },
-    });
+  // Initialize EmailJS with your Public Key
+  emailjs.init("evO7PhDyoN5B_rsaT"); // Public key initialization
 
-    // Send the form data using EmailJS
-    emailjs.sendForm("service_juppchs", "template_dnqh1xi", form).then(
-      (response) => {
-        // Success message
-        document.getElementById("form-feedback").innerHTML =
-          '<div class="alert alert-success">Message sent successfully! Check your inbox.</div>';
-        form.reset(); // Reset the form
-        form.classList.remove("was-validated"); // Remove validation state
-      },
-      (error) => {
-        // Error message
-        document.getElementById(
-          "form-feedback"
-        ).innerHTML = `<div class="alert alert-danger">${error.message}</div>`;
-      }
-    );
-  });
+  // Send the form data using EmailJS
+  emailjs.sendForm("service_juppchs", "template_dnqh1xi", form).then(
+    (response) => {
+      // Success message
+      document.getElementById("form-feedback").innerHTML =
+        '<div class="alert alert-success">Message sent successfully! Check your inbox.</div>';
+      form.reset(); // Reset the form
+      form.classList.remove("was-validated"); // Remove validation state
+    },
+    (error) => {
+      // Error message
+      document.getElementById(
+        "form-feedback"
+      ).innerHTML = `<div class="alert alert-danger">${error.message}</div>`;
+    }
+  );
+});
