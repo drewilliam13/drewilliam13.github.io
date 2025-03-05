@@ -115,9 +115,6 @@ document
       return; // Stop if the form is invalid
     }
 
-    // Create FormData object for the form
-    const formData = new FormData(form);
-
     // Initialize EmailJS with your Public Key
     emailjs.init({
       publicKey: "evO7PhDyoN5B_rsaT", // Replace with your actual Public Key
@@ -129,7 +126,7 @@ document
     });
 
     // Send the form data using EmailJS
-    emailjs.sendForm("service_juppchs", "template_dnqh1xi", formData).then(
+    emailjs.sendForm("service_juppchs", "template_dnqh1xi", form).then(
       function (response) {
         // Success message
         document.getElementById("form-feedback").innerHTML =
