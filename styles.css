@@ -248,28 +248,28 @@ strong {
   }
 
   .testimonial {
-    min-width: 270px; /* Reduced size for mobile */
+    min-width: 100px; /* Reduced size for mobile */
     max-width: 320px; /* Adjusted max width for mobile */
   }
 
   .testimonial-prev,
   .testimonial-next {
-    font-size: 1.5rem; /* Smaller arrows for mobile */
+    font-size: 1rem; /* Smaller arrows for mobile */
   }
 
   /* Adjust the left and right margins for the arrows */
   .testimonial-prev,
   .testimonial-next {
-    padding: 0 15px; /* Smaller padding for arrows */
+    padding: 0 10px; /* Smaller padding for arrows */
   }
 
   /* Optionally, adjust the arrow container's position for smaller screens */
   .testimonial-prev {
-    left: 10px;
+    left: 5px;
   }
 
   .testimonial-next {
-    right: 10px;
+    right: 5px;
   }
 }
 
