@@ -2,12 +2,6 @@ html {
   scroll-behavior: smooth;
 }
 
-h4 {
-  font-size: 20px;
-  color: grey;
-  padding-left: 20px;
-}
-
 section,
 #about {
   scroll-margin-top: 80px; /* Adjust this value to match your navbar height */
@@ -23,7 +17,7 @@ body::before {
   height: 100vh;
   background: url("https://upload.wikimedia.org/wikipedia/commons/4/4d/Saguaro_National_Park_Vista_-_Flickr_-_kinglear55.jpg")
     center/cover no-repeat;
-  opacity: 0.15; /* 15% opacity */
+  opacity: 0.18; /* 18% opacity */
   z-index: -1; /* Places it behind everything */
 }
 
@@ -235,41 +229,17 @@ strong {
   color: #005582;
 }
 
-/* Mobile responsiveness */
 @media (max-width: 768px) {
-  .testimonials-wrapper {
-    width: 100%;
-    overflow-x: auto; /* Enable scrolling */
-  }
-
   .testimonials-container {
-    gap: 0px;
-    width: calc(100% - 60px); /* Adjust width to leave space for arrows */
+    scroll-snap-type: x mandatory; /* Enables forced snapping */
+    scroll-padding-left: 0px; /* Ensures the first box is aligned properly */
+    justify-content: flex-start; /* Aligns the first box properly */
   }
 
   .testimonial {
-    min-width: 50px; /* Reduced size for mobile */
-    max-width: 320px; /* Adjusted max width for mobile */
-  }
-
-  .testimonial-prev,
-  .testimonial-next {
-    font-size: 1.5rem; /* Smaller arrows for mobile */
-  }
-
-  /* Adjust the left and right margins for the arrows */
-  .testimonial-prev,
-  .testimonial-next {
-    padding: 0 3px; /* Smaller padding for arrows */
-  }
-
-  /* Optionally, adjust the arrow container's position for smaller screens */
-  .testimonial-prev {
-    left: 0px;
-  }
-
-  .testimonial-next {
-    right: 0px;
+    flex: 0 0 100%; /* Forces only one box to be visible at a time */
+    max-width: 100%; /* Prevents half boxes from showing */
+    scroll-snap-align: start; /* Ensures each box snaps correctly */
   }
 }
 
