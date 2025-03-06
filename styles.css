@@ -237,8 +237,8 @@ strong {
   }
 
   .testimonial {
-    flex: 0 0 100%; /* Forces only one box to be visible at a time */
-    max-width: 100%; /* Prevents half boxes from showing */
+    flex: 0 0 90%; /* Forces only one box to be visible at a time */
+    max-width: 90%; /* Prevents half boxes from showing */
     scroll-snap-align: start; /* Ensures each box snaps correctly */
   }
 }
