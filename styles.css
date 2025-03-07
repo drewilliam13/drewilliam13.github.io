@@ -234,12 +234,40 @@ strong {
     scroll-snap-type: x mandatory; /* Enables forced snapping */
     scroll-padding-left: 0px; /* Ensures the first box is aligned properly */
     justify-content: flex-start; /* Aligns the first box properly */
+    width: calc(100% - 60px); /* Adjust width to leave space for arrows */
   }
 
   .testimonial {
     flex: 0 0 80%; /* Forces only one box to be visible at a time */
     max-width: 80vw; /* Prevents half boxes from showing */
     scroll-snap-align: start; /* Ensures each box snaps correctly */
+    min-width: 50px; /* Reduced size for mobile */
+    max-width: 320px; /* Adjusted max width for mobile */
+  }
+
+  .testimonials-wrapper {
+    width: 100%;
+    overflow-x: auto; /* Enable scrolling */
+  }
+
+  .testimonial-prev,
+  .testimonial-next {
+    font-size: 1.5rem; /* Smaller arrows for mobile */
+  }
+
+  /* Adjust the left and right margins for the arrows */
+  .testimonial-prev,
+  .testimonial-next {
+    padding: 0 3px; /* Smaller padding for arrows */
+  }
+
+  /* Optionally, adjust the arrow container's position for smaller screens */
+  .testimonial-prev {
+    left: 2px;
+  }
+
+  .testimonial-next {
+    right: 2px;
   }
 }
 
