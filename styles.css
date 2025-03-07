@@ -237,8 +237,8 @@ strong {
   }
 
   .testimonial {
-    flex: 0 0 min(90vw, 300px); /* Ensures it never overflows */
-    max-width: min(90vw, 300px); /* Shrinks properly on small screens */
+    flex: 0 0 80%; /* Forces only one box to be visible at a time */
+    max-width: 80vw; /* Prevents half boxes from showing */
     scroll-snap-align: start; /* Ensures each box snaps correctly */
   }
 }
