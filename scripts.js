@@ -1,4 +1,4 @@
-// Hamburger Menu
+///////// Hamburger Menu //////////////////////////////////////////////////////////
 document.addEventListener("click", function (event) {
   const navbarToggler = document.querySelector(".navbar-toggler");
   const navbarCollapse = document.querySelector(".navbar-collapse");
@@ -25,7 +25,7 @@ document.querySelectorAll(".navbar-nav .nav-link").forEach((item) => {
   });
 });
 
-// Testimonials (Manual Scroll Only)
+/////////////// Testimonials (Manual Scroll Only) /////////////////////////////////////////
 document.addEventListener("DOMContentLoaded", function () {
   const container = document.querySelector(".testimonials-container");
   const prevBtn = document.querySelector(".testimonial-prev");
@@ -68,7 +68,30 @@ document.addEventListener("DOMContentLoaded", function () {
   updateArrows();
 });
 
-// Skill Icons
+document.addEventListener("DOMContentLoaded", function () {
+  const container = document.querySelector(".testimonials-container");
+  const prevBtn = document.querySelector(".testimonial-prev");
+  const nextBtn = document.querySelector(".testimonial-next");
+
+  function isMobile() {
+    return window.innerWidth <= 768;
+  }
+
+  function scrollToTestimonial(direction) {
+    if (!isMobile()) return; // Only run on mobile
+
+    const testimonialWidth = container.firstElementChild.clientWidth;
+    container.scrollBy({
+      left: direction * testimonialWidth,
+      behavior: "smooth",
+    });
+  }
+
+  prevBtn.addEventListener("click", () => scrollToTestimonial(-1));
+  nextBtn.addEventListener("click", () => scrollToTestimonial(1));
+});
+
+//////// Skill Icons /////////////////////////////////////////////////////////////////////////////////
 // Wait for the DOM to be loaded
 document.addEventListener("DOMContentLoaded", function () {
   const skillIcons = document.querySelectorAll(".skill-icon"); // Select all skill icons
@@ -96,40 +119,42 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Contact Form Handling
-document.getElementById("contact-form").addEventListener("submit", function (e) {
-  e.preventDefault(); // Prevent the form from submitting traditionally
+////////////////////////// Contact Form Handling ////////////////////////////////////////////////
+document
+  .getElementById("contact-form")
+  .addEventListener("submit", function (e) {
+    e.preventDefault(); // Prevent the form from submitting traditionally
 
-  const form = e.target;
-  const email = form.querySelector("#email");
-  const isValidEmail = email.checkValidity(); // HTML5 validation
+    const form = e.target;
+    const email = form.querySelector("#email");
+    const isValidEmail = email.checkValidity(); // HTML5 validation
 
-  // Check if the form is valid
-  if (!form.checkValidity()) {
-    form.classList.add("was-validated");
-    if (!isValidEmail) {
-      email.classList.add("is-invalid");
+    // Check if the form is valid
+    if (!form.checkValidity()) {
+      form.classList.add("was-validated");
+      if (!isValidEmail) {
+        email.classList.add("is-invalid");
+      }
+      return; // Stop if the form is invalid
     }
-    return; // Stop if the form is invalid
-  }
 
-  // Initialize EmailJS with your Public Key
-  emailjs.init("evO7PhDyoN5B_rsaT"); // Public key initialization
+    // Initialize EmailJS with your Public Key
+    emailjs.init("evO7PhDyoN5B_rsaT"); // Public key initialization
 
-  // Send the form data using EmailJS
-  emailjs.sendForm("service_juppchs", "template_dnqh1xi", form).then(
-    (response) => {
-      // Success message
-      document.getElementById("form-feedback").innerHTML =
-        '<div class="alert alert-success">Message sent successfully!</div>';
-      form.reset(); // Reset the form
-      form.classList.remove("was-validated"); // Remove validation state
-    },
-    (error) => {
-      // Error message
-      document.getElementById(
-        "form-feedback"
-      ).innerHTML = `<div class="alert alert-danger">${error.message}</div>`;
-    }
-  );
-});
+    // Send the form data using EmailJS
+    emailjs.sendForm("service_juppchs", "template_dnqh1xi", form).then(
+      (response) => {
+        // Success message
+        document.getElementById("form-feedback").innerHTML =
+          '<div class="alert alert-success">Message sent successfully!</div>';
+        form.reset(); // Reset the form
+        form.classList.remove("was-validated"); // Remove validation state
+      },
+      (error) => {
+        // Error message
+        document.getElementById(
+          "form-feedback"
+        ).innerHTML = `<div class="alert alert-danger">${error.message}</div>`;
+      }
+    );
+  });

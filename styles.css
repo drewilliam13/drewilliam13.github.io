@@ -2,11 +2,6 @@ html {
   scroll-behavior: smooth;
 }
 
-section,
-#about {
-  scroll-margin-top: 80px; /* Adjust this value to match your navbar height */
-}
-
 /* Background Image with White Overlay */
 body::before {
   content: "";
@@ -39,6 +34,11 @@ a.myname {
 }
 
 /********** About Section **********************************************************************/
+section,
+#about {
+  scroll-margin-top: 80px; /* Adjust this value to match your navbar height */
+}
+
 #top .row {
   display: flex;
   justify-content: center; /* Centers the content horizontally */
@@ -54,85 +54,6 @@ a.myname {
 strong {
   font-weight: 500; /* Medium boldness */
 }
-
-/*********** Skills Section ************************************************************************/
-.skill {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  width: 100px;
-  height: 100px;
-  position: relative;
-  transition: transform 0.3s ease-in-out;
-  margin-bottom: 30px;
-}
-
-.skill img,
-.skill i {
-  width: 80px; /* Match Postman size */
-  height: 80px;
-  transition: transform 0.3s ease-in-out;
-}
-
-/* Hover & Tap Effect */
-.skill:hover img,
-.skill:focus img,
-.skill:hover i,
-.skill:focus i {
-  transform: scale(1.2);
-}
-
-.skill span {
-  position: absolute;
-  bottom: -25px;
-  font-size: 14px;
-  font-weight: bold;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.skill:hover span,
-.skill:focus span {
-  visibility: visible;
-  opacity: 1;
-}
-
-/* Set Proper Brand Colors */
-.js-icon {
-  color: #f7df1e;
-  font-size: 80px;
-} /* JavaScript Yellow */
-.sql-icon {
-  color: #4479a1;
-  font-size: 80px;
-} /* SQL Blue */
-.terminal-icon {
-  color: #4e4e4e;
-  font-size: 80px;
-} /* Dark Grey */
-.git-icon {
-  color: #f34f29;
-  font-size: 80px;
-} /* Git Red */
-.figma-icon {
-  color: #f24e1e; /* Figma's main brand color */
-  font-size: 80px; /* Match all other icons */
-}
-.slack-icon {
-  color: #4a154b;
-  font-size: 80px;
-} /* Slack Purple */
-.html-icon {
-  color: #e34f26;
-  font-size: 80px;
-} /* HTML Orange */
-.css-icon {
-  color: #1572b6;
-  font-size: 80px;
-} /* CSS Blue */
 
 /************* Testimonials Section ***************************************************************/
 
@@ -247,6 +168,10 @@ strong {
     width: 100%;
     overflow-x: auto; /* Enable scrolling */
   }
+  
+  .testimonials-container {
+    scroll-behavior: auto !important; /* Disable smooth scrolling only on mobile */
+  }
 
   .testimonial-prev,
   .testimonial-next {
@@ -269,6 +194,84 @@ strong {
   }
 }
 
+/*********** Skills Section ************************************************************************/
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+  margin-bottom: 30px;
+}
+
+.skill img,
+.skill i {
+  width: 80px; /* Match Postman size */
+  height: 80px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover & Tap Effect */
+.skill:hover img,
+.skill:focus img,
+.skill:hover i,
+.skill:focus i {
+  transform: scale(1.2);
+}
+
+.skill span {
+  position: absolute;
+  bottom: -25px;
+  font-size: 14px;
+  font-weight: bold;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.skill:hover span,
+.skill:focus span {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Set Proper Brand Colors */
+.js-icon {
+  color: #f7df1e;
+  font-size: 80px;
+} /* JavaScript Yellow */
+.sql-icon {
+  color: #4479a1;
+  font-size: 80px;
+} /* SQL Blue */
+.terminal-icon {
+  color: #4e4e4e;
+  font-size: 80px;
+} /* Dark Grey */
+.git-icon {
+  color: #f34f29;
+  font-size: 80px;
+} /* Git Red */
+.figma-icon {
+  color: #f24e1e; /* Figma's main brand color */
+  font-size: 80px; /* Match all other icons */
+}
+.slack-icon {
+  color: #4a154b;
+  font-size: 80px;
+} /* Slack Purple */
+.html-icon {
+  color: #e34f26;
+  font-size: 80px;
+} /* HTML Orange */
+.css-icon {
+  color: #1572b6;
+  font-size: 80px;
+} /* CSS Blue */
 
 /************************** Experience Section *************************************************************/
 
