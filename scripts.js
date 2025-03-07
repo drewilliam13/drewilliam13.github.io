@@ -73,22 +73,17 @@ document.addEventListener("DOMContentLoaded", function () {
   const prevBtn = document.querySelector(".testimonial-prev");
   const nextBtn = document.querySelector(".testimonial-next");
 
-  function isMobile() {
-    return window.innerWidth <= 768;
+  function getTestimonialWidth() {
+    return document.querySelector(".testimonial").offsetWidth + 20; // Add gap spacing if needed
   }
 
-  function scrollToTestimonial(direction) {
-    if (!isMobile()) return; // Only run on mobile
+  prevBtn.addEventListener("click", () => {
+    container.scrollBy({ left: -getTestimonialWidth(), behavior: "smooth" });
+  });
 
-    const testimonialWidth = container.firstElementChild.clientWidth;
-    container.scrollBy({
-      left: direction * testimonialWidth,
-      behavior: "smooth",
-    });
-  }
-
-  prevBtn.addEventListener("click", () => scrollToTestimonial(-1));
-  nextBtn.addEventListener("click", () => scrollToTestimonial(1));
+  nextBtn.addEventListener("click", () => {
+    container.scrollBy({ left: getTestimonialWidth(), behavior: "smooth" });
+  });
 });
 
 //////// Skill Icons /////////////////////////////////////////////////////////////////////////////////

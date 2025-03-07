@@ -168,10 +168,6 @@ strong {
     width: 100%;
     overflow-x: auto; /* Enable scrolling */
   }
-  
-  .testimonials-container {
-    scroll-behavior: auto !important; /* Disable smooth scrolling only on mobile */
-  }
 
   .testimonial-prev,
   .testimonial-next {
