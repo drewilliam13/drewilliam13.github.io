@@ -240,7 +240,7 @@ strong {
   .testimonial {
     flex: 0 0 100%; /* Ensures only one box fits at a time */
     max-width: 100%; /* Prevents partial display of other boxes */
-    scroll-snap-align: center; /* Centers each box */
+    scroll-snap-align: start; /* ensures proper snapping */
   }
 
   .testimonials-wrapper {
