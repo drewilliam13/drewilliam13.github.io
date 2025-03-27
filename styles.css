@@ -16,14 +16,6 @@ body::before {
   z-index: -1; /* Places it behind everything */
 }
 
-/* Content Boxes (Keeps Solid Background) */
-.content-box {
-  background: #f8f9fa;
-  padding: 20px;
-  border-radius: 8px; /* Optional for rounded corners */
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
-}
-
 a {
   text-decoration: none;
 }
@@ -31,6 +23,12 @@ a {
 a.myname {
   text-decoration: none;
   color: inherit;
+}
+
+section, nav .container {
+  max-width: 1630px !important;
+  margin: 0 auto;
+  padding: 0 100px;
 }
 
 /********** About Section **********************************************************************/
@@ -67,6 +65,7 @@ strong {
 }
 
 .testimonials-container {
+  justify-content: center;
   display: flex;
   gap: 20px;
   overflow-x: auto; /* Allow scrolling horizontally */
