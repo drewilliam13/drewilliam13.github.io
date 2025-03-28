@@ -1,3 +1,4 @@
+/*************************************** UNIVERSAL STYLES ******************************/
 html {
   scroll-behavior: smooth;
 }
@@ -25,7 +26,8 @@ a.myname {
   color: inherit;
 }
 
-section, nav .container {
+section,
+nav .container {
   max-width: 1630px !important;
   margin: 0 auto;
   padding: 0 100px;
@@ -171,15 +173,10 @@ strong {
   .testimonial-prev,
   .testimonial-next {
     font-size: 1.5rem; /* Smaller arrows for mobile */
-  }
-
-  /* Adjust the left and right margins for the arrows */
-  .testimonial-prev,
-  .testimonial-next {
     padding: 0 3px; /* Smaller padding for arrows */
   }
 
-  /* Optionally, adjust the arrow container's position for smaller screens */
+  /* Adjusts the arrow container's position for smaller screens */
   .testimonial-prev {
     left: 2px;
   }
@@ -447,26 +444,20 @@ strong {
   font-size: 20px;
 }
 
-/* Contact Container: Layout */
 .contact-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   gap: 2rem;
-}
-
-/* Contact Info */
-.contact-info {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  max-width: 1630px;
+  margin: 0 auto; /* This centers the container horizontally */
 }
 
 .contact-item {
   display: flex;
   align-items: left;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
   margin-bottom: 1rem;
 }
 
@@ -485,21 +476,6 @@ strong {
   color: #333;
 }
 
-/* Contact Section */
-#contact {
-  padding: 2rem;
-  background-color: #f1f1f1;
-}
-
-/* Contact Container: Layout */
-.contact-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 2rem;
-}
-
-/* Contact Info Box */
 .contact-info-box {
   flex: 1;
   background-color: #ffffff;
@@ -520,28 +496,6 @@ strong {
   margin-top: 30px;
 }
 
-.contact-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1rem;
-}
-
-.contact-item a {
-  margin-right: 10px;
-}
-
-.contact-icon {
-  width: 40px;
-  height: auto;
-  vertical-align: middle;
-}
-
-.contact-item span {
-  font-size: 1.2rem;
-  color: #333;
-}
-
-/* Contact Form */
 .contact-form {
   flex: 2;
   background-color: #ffffff;
@@ -602,4 +556,20 @@ strong {
   .contact-form {
     padding: 1rem;
   }
+}
+
+footer {
+  background-color: #333; /* Dark background color */
+  color: white; /* White text color */
+  text-align: center; /* Center the text */
+  padding: 10px 0; /* Add padding for space */
+  position: relative; /* Ensures footer stays at the bottom */
+  width: 100%; /* Make sure it spans the full width */
+  bottom: 0;
+}
+
+footer p {
+  font-size: 12px; /* Small text */
+  margin: 0; /* Remove any default margin */
+  font-style: italic; /* Italicize the text */
 }
