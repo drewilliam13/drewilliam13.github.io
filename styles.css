@@ -365,14 +365,16 @@ strong {
 
 /* Add a subtle link color */
 .experience-box a,
-.education-container a {
+.education-container a,
+.contact-info-box a {
   text-decoration: none;
   color: #4f9d9d;
 }
 
 .experience-box a:hover,
-.education-container a:hover {
-  color: darkcyan; /* Calming teal color on hover */
+.education-container a:hover,
+.contact-info-box a:hover {
+  color: darkslategray;
 }
 
 /******************************* Education Section *****************************************/
@@ -472,8 +474,7 @@ strong {
 }
 
 .contact-item span {
-  font-size: 1.2rem;
-  color: #333;
+  font-size: 1rem;
 }
 
 .contact-info-box {
